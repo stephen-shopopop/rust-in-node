@@ -8,16 +8,18 @@ pub fn plus_100(input: u32) -> u32 {
 }
 
 #[cfg(test)]
-mod tests {
+mod plus_100 {
   #[test]
   fn not_works() {
-    let result = 2 + 3;
-    assert_eq!(result, 4);
+    let result = super::plus_100(1);
+
+    assert_ne!(result, 100);
   }
 
   #[test]
   fn it_works() {
-    let result = 2 + 2;
-    assert_eq!(result, 4);
+    let result = super::plus_100(1);
+
+    assert_eq!(result, 101);
   }
 }
